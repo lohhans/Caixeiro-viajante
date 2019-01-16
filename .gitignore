@@ -1,0 +1,2 @@
+# Remoção do compilado do Python do repositório
+*.pyc
