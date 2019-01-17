@@ -18,23 +18,27 @@ def gerarCaminho(matriz):
     pontos = resgatarPontos(matriz)
     pontos = ordenarPontosPorColuna(pontos)
 
-    resultado = [pontos[0]]
+    resultadoParcial = [pontos[0]]
+    consicaoInverter = (len(pontos)-4)
+
     for k in range(0, (len(pontos)-4), 2):
-        if pontos[k+1].linha < pontos[k+2].linha:
-            resultado.append(pontos[k+2])
-            del(pontos[k+2])
+        if pontos[k+1].linha <= pontos[k+2].linha:
+            resultadoParcial.append(pontos[k+2])
+            pontos.remove(pontos[k+2])
 
         else:
-            resultado.append(pontos[k+1])
-            del(pontos[k+1])
+            resultadoParcial.append(pontos[k+1])
+            pontos.remove(pontos[k+1])
 
     pontos = ordenarPontosPorColuna(pontos)
-    pontos.reverse()
-    for k in range(len(pontos)):
-        resultado.append(pontos[k])
-    resultado.reverse()
+    resultadoParcial.reverse()
+    for k in range(len(resultadoParcial)):
+        pontos.append(resultadoParcial[k])
 
-    return resultado
+    if consicaoInverter < 0:
+        pontos.reverse()
+
+    return pontos
 
 def printArray(array):
     valor = []
