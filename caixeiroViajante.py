@@ -19,7 +19,7 @@ def gerarCaminho(matriz):
     pontos = ordenarPontosPorColuna(pontos)
 
     resultado = [pontos[0]]
-    for k in range(0, (len(pontos)-3), 2):
+    for k in range(0, (len(pontos)-4), 2):
         if pontos[k+1].linha < pontos[k+2].linha:
             resultado.append(pontos[k+2])
             del(pontos[k+2])
@@ -39,5 +39,5 @@ def gerarCaminho(matriz):
 def printArray(array):
     valor = []
     for k in range(len(array)):
-        valor.append(array[k].nome + " "+str(array[k].coluna))
+        valor.append(array[k].nome)
     print(valor)
