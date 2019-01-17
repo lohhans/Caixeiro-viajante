@@ -2,7 +2,7 @@ from matriz import Matriz
 from ponto import Ponto
 from caixeiroViajante import *
 
-matriz = Matriz(5,5)
+matriz = Matriz(9)
 
 ponto1 = Ponto('A')
 ponto2 = Ponto('B')
@@ -11,26 +11,24 @@ ponto4 = Ponto('D')
 ponto5 = Ponto('E')
 ponto6 = Ponto('F')
 ponto7 = Ponto('G')
+ponto8 = Ponto('Y')
+ponto9 = Ponto('X')
+ponto10 = Ponto('Z')
 
+matriz.inserirElemento(0,0,ponto1)
+matriz.inserirElemento(6,1,ponto2)
+matriz.inserirElemento(3,2,ponto3)
+matriz.inserirElemento(2,5,ponto4)
+matriz.inserirElemento(5,6,ponto5)
+matriz.inserirElemento(1,7,ponto6)
+matriz.inserirElemento(4,8,ponto7)
+matriz.inserirElemento(0,1,ponto8)
+matriz.inserirElemento(0,2,ponto9)
+matriz.inserirElemento(0,3,ponto10)
 
-matriz.inserirElemento(0,1,ponto1)
-print(matriz.elementos[0][1].nome)
-matriz.inserirElemento(2,2,ponto2)
-print(matriz.elementos[2][2].nome)
-matriz.inserirElemento(2,3,ponto3)
-print(matriz.elementos[2][3].nome)
-matriz.inserirElemento(3,3,ponto4)
-print(matriz.elementos[3][3].nome)
-matriz.inserirElemento(3,4,ponto5)
-print(matriz.elementos[3][4].nome)
-matriz.inserirElemento(4,2,ponto6)
-print(matriz.elementos[4][2].nome)
-matriz.inserirElemento(3,0,ponto7)
-print(matriz.elementos[3][0].nome)
+matriz.mostrarMatriz(matriz)
+
 print(" ")
 
-matriz.mostrarMatriz(matriz,5,5)
-#
-# resultado = []
-# resultado = caixeiroViajante(matriz, ponto2)
-# mostrarResultado(resultado)
+resp = gerarCaminho(matriz)
+printArray(resp)
