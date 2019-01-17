@@ -17,14 +17,14 @@ ponto10 = Ponto('Z')
 
 matriz.inserirElemento(0,0,ponto1)
 matriz.inserirElemento(6,1,ponto2)
-matriz.inserirElemento(3,2,ponto3)
+# matriz.inserirElemento(3,2,ponto3)
 matriz.inserirElemento(2,5,ponto4)
 matriz.inserirElemento(5,6,ponto5)
 matriz.inserirElemento(1,7,ponto6)
 matriz.inserirElemento(4,8,ponto7)
-matriz.inserirElemento(0,1,ponto8)
-matriz.inserirElemento(0,2,ponto9)
-matriz.inserirElemento(0,3,ponto10)
+# matriz.inserirElemento(0,1,ponto8)
+# matriz.inserirElemento(0,2,ponto9)
+# matriz.inserirElemento(0,3,ponto10)
 
 matriz.mostrarMatriz(matriz)
 
