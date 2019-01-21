@@ -14,31 +14,26 @@ def ordenarPontosPorColuna(vetor):
     vetor.sort(key=lambda x:x.coluna)
     return vetor
 
-def gerarCaminho(matriz):
+def caixeiroViajante(matriz):
     pontos = resgatarPontos(matriz)
     pontos = ordenarPontosPorColuna(pontos)
+    pontosAux = pontos[:]
 
-    resultadoParcial = [pontos[0]]
-    consicaoInverter = (len(pontos)-4)
+    vetorAux = [pontos[0]]
 
-    for k in range(0, (len(pontos)-4), 2):
+    for k in range(0, (len(pontos)-2), 2):
         if pontos[k+1].linha <= pontos[k+2].linha:
-            resultadoParcial.append(pontos[k+2])
-            pontos.remove(pontos[k+2])
-
+            vetorAux.append(pontos[k+2])
+            pontosAux.remove(pontos[k+2])
         else:
-            resultadoParcial.append(pontos[k+1])
-            pontos.remove(pontos[k+1])
+            vetorAux.append(pontos[k+1])
+            pontosAux.remove(pontos[k+1])
 
-    pontos = ordenarPontosPorColuna(pontos)
-    resultadoParcial.reverse()
-    for k in range(len(resultadoParcial)):
-        pontos.append(resultadoParcial[k])
+    vetorAux.reverse()
+    for k in range(len(vetorAux)):
+        pontosAux.append(vetorAux[k])
 
-    if consicaoInverter < 0:
-        pontos.reverse()
-
-    return pontos
+    return pontosAux
 
 def printArray(array):
     valor = []
