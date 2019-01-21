@@ -10,6 +10,7 @@ J. L. Bentley sugeriu que simplificássemos o problema restringindo nossa atenç
 
 Descreva um algoritmo de tempo O(n²) para determinar um percurso bitônico ótimo. Considere por hipótese que não existem dois pontos com a mesma coordenada *x*. *(Sugestão: Desloque-se da esquerda para a direita, mantendo possibilidades ótimas para as duas partes do percurso.)*
 
+![Figura](images/figura.png?raw=true "Figura 15.9")
 
 **Autores:**
 
