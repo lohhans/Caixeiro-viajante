@@ -18,12 +18,10 @@ def eliminarIntersecao(lista1, lista2):
 
 def caixeiroViajanteBT(matriz):
     pontos = resgatarPontos(matriz)
-    verificados = []
     caminho = []
 
     caminho.append(pontos[0])
     caminho[0].verificado = True
-    verificados.append(pontos[0])
     # for k in range(len(pontos))
 
     i = 0
@@ -33,13 +31,12 @@ def caixeiroViajanteBT(matriz):
         i += 1
         caminho.append(pontos[k])
 
-        print(caminho[i-1].nome + ' ' +str(caminho[i-1].linha))
-        print(pontos[k].nome+ ' ' +str(pontos[k].linha))
+        # print(caminho[i-1].nome + ' ' +str(caminho[i-1].linha))
+        # print(pontos[k].nome+ ' ' +str(pontos[k].linha))
 
         if caminho[i-1].linha > pontos[k].linha and (caminho[i-1].verificado == False):
 
             caminho[i].verificado = True
-            verificados.append(caminho[i])
             caminho.remove(caminho[i-1])
             k += 1
             i -= 1
