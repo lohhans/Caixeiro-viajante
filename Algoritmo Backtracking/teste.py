@@ -13,7 +13,6 @@ ponto5 = Ponto('E')
 ponto6 = Ponto('F')
 ponto7 = Ponto('G')
 
-
 matriz.inserirElemento(0,0,ponto1)
 matriz.inserirElemento(6,1,ponto2)
 matriz.inserirElemento(3,2,ponto3)
@@ -29,17 +28,19 @@ print(" ")
 # Registra o momento antes da execução do algoritmo
 t0 = datetime.now()
 
-resp = caixeiroViajanteBT(matriz) #Realiza o caminho bitônico
+# Roda o algoritmo 10 vezes
+for k in range(10):
+    resp = caixeiroViajanteBT(matriz) #Realiza o caminho bitônico
 
 # Registra o momento apos a execução do algoritmo
 t1 = datetime.now()
 
 # Calcula a o tempo de execucao em milissegundos da operacao
 diff = t1 - t0
-tempo = (diff.total_seconds() * 1000)
+tempo = (diff.total_seconds() * 1000) / k
 
 printArray(resp) #Print do caminho
 print(" ")
 
 # Exibe resultado do teste
-print("Tempo de execução do Algoritmo Backtracking: " + str(tempo) + " ms")
+print("Média de tempo do Algoritmo Backtracking executado 10 vezes: " + str(tempo) + " ms")
