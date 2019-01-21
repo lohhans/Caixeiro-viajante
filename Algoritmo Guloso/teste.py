@@ -1,7 +1,7 @@
-import time
 from matriz import Matriz
 from ponto import Ponto
 from caixeiroViajante import *
+from datetime import datetime
 
 matriz = Matriz(24)
 
@@ -87,18 +87,25 @@ matriz.inserirElemento(23,20,ponto35)
 # matriz.inserirElemento(4,8,ponto7)
 # matriz.inserirElemento(5,3,ponto8)
 # matriz.inserirElemento(8,4,ponto9)
-inicio = time.time()
 
+print("Problema bitônico euclidiano do caixeiro-viajante:")
+matriz.mostrarMatriz(matriz) #Print da matriz
 print(" ")
 
-matriz.mostrarMatriz(matriz)
+# Registra o momento antes da execução do algoritmo
+t0 = datetime.now()
 
+resp = caixeiroViajante(matriz) #Realiza o caminho bitônico
+
+# Registra o momento apos a execução do algoritmo
+t1 = datetime.now()
+
+# Calcula a o tempo de execucao em milissegundos da operacao
+diff = t1 - t0
+tempo = (diff.total_seconds() * 1000)
+
+printArray(resp) #Print do caminho
 print(" ")
 
-resp = caixeiroViajante(matriz)
-printArray(resp)
-
-print(" ")
-
-fim = time.time()
-print("Tempo de execução:", fim - inicio, "segundos")
+# Exibe resultado do teste
+print("Tempo de execução do Algoritmo Guloso: " + str(tempo) + " ms")
