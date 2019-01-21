@@ -1,6 +1,6 @@
 # Problema bitônico euclidiano do caixeiro-viajante
 
-Implementação do *problema euclidiano bitônico do caixeiro-viajante* para a disciplina de "[Projeto e Análise de Algoritmos][PAA]", no curso de [Ciência da Computação na Universidade Federal Rural de Pernambuco - Unidade Acadêmica de Garanhuns][UFRPE]. Estruturas desenvolvidas conforme orientação do [Prof. Tiago B. A. de Carvalho][professor], atividade retirada do livro "[Algoritmos: Teoria e Prática][livro]". <sub>([VER PROBLEMA][Problema])</sub>
+Implementação do *problema euclidiano bitônico do caixeiro-viajante* para a disciplina de "[Projeto e Análise de Algoritmos][PAA]", no curso de [Ciência da Computação na Universidade Federal Rural de Pernambuco - Unidade Acadêmica de Garanhuns][UFRPE]. Estruturas desenvolvidas conforme orientação do [Prof. Tiago B. A. de Carvalho][professor], atividade retirada do livro "[Algoritmos: Teoria e Prática][livro]".
 
 ## ***15.1 Problema euclidiano bitônico do caixeiro-viajante:***
 
