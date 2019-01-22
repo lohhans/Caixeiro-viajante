@@ -15,7 +15,7 @@ Descreva um algoritmo de tempo O(n²) para determinar um percurso bitônico óti
 </p>
 
 <p align="center">
-    <sub>(Imagem retirada do livro "[Algoritmos: Teoria e Prática][livro]")</sub>
+    <sub>(Imagem retirada do livro "Algoritmos: Teoria e Prática")</sub>
 </p>
 
 **Autores:**
