@@ -14,6 +14,10 @@ Descreva um algoritmo de tempo O(n²) para determinar um percurso bitônico óti
   <img src="https://github.com/lohhans/Caixeiro-viajante/blob/master/images/figura.png?raw=true?" alt="Figura 15.9"/>
 </p>
 
+<p align="center">
+    <sub>(Imagem retirada do livro "[Algoritmos: Teoria e Prática][livro]")</sub>
+</p>
+
 **Autores:**
 
 [![Antônio A. S. N.](https://avatars1.githubusercontent.com/u/33501786?s=64&v=4)](https://github.com/AntonioAdelino) |  [![Armstrong L. M. G. Q.](https://avatars0.githubusercontent.com/u/30741312?s=64&v=4)](https://github.com/lohhans)
